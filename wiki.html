@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About me</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- table of contents to the left -->
+    <aside class="toc">
+        <h2>Table of Contents</h2>
+        <a href="#early-age">1. Early Age</a>
+        <a href="#career">2. Career</a>
+        <a href="#family">3. Family</a>
+    </aside>
+
+    
+    <!-- Main Content on the right -->
+     <main class = "content-area">
+        <section id="early-age">
+            <button type="button" class="collapsible"><h2>1. Early Age</h2></button>
+            <div class="content">
+                <p>I was very good at studies and sports in my early age.</p>
+                <p>Additional information about my early age experiences.</p>
+            </div>
+        </section>
+        <section id="career">
+            <button type="button" class="collapsible"><h2>2. Career</h2></button>
+            <div class="content">
+                <p>I interned at Google this summer and will be interning next year also. </p>
+                <p>Additional information about my career.</p>
+            </div>
+        </section>
+        <section id="family">
+            <button type="button" class="collapsible"><h2>3. Family</h2></button>
+            <div class="content">
+                <p>I come from a very supportive family. </p>
+                <p>Additional information about my family.</p>
+            </div>
+        </section>
+     </main>
+     <script>
+        var coll = document.getElementsByClassName("collapsible");
+        for (var i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+
+
+
+</body>
+</html>
